@@ -15,9 +15,11 @@ function App () {
   useEffect(() => {
     localStorage.setItem('favColors', JSON.stringify(favorites))
   }, [favorites])
+
   useEffect(() => {
     if (selectedFav) { setMyColors(selectedFav) }
   }, [selectedFav])
+
   const handleColor = (color) => {
     const newColor = [...myColors.colors]
     newColor[selectedColor] = color.hex
@@ -28,10 +30,10 @@ function App () {
     <div className="App">
       <Header />
       <main>
-        <ColorList myColors={myColors} setSelectedColor={setSelectedColor} />
+        <ColorList myColors={myColors} setSelectedColor={setSelectedColor} selectedColor={selectedColor} />
         <div className='options'>
-        <CompactPicker onChange={handleColor}/>
-        <ColorsName myColors={myColors} setMyColors={setMyColors} favorites={favorites} setFavorites={setFavorites}/>
+          <CompactPicker onChange={handleColor}/>
+          <ColorsName myColors={myColors} setMyColors={setMyColors} favorites={favorites} setFavorites={setFavorites}/>
         </div>
         <SavedFavs favorites={favorites} setFavorites={setFavorites} setSelectedFav={setSelectedFav}/>
 

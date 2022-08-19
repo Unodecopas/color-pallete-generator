@@ -1,11 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './styles.module.css'
-const ColorList = ({ myColors, setSelectedColor }) => {
-  const [selectedOption, setSelectedOption] = useState()
-
+const ColorList = ({ myColors, selectedColor, setSelectedColor }) => {
   const handleClick = (index) => {
     setSelectedColor(index)
-    setSelectedOption(index)
   }
   return (
     <section className={styles.colorList}>
@@ -14,7 +11,7 @@ const ColorList = ({ myColors, setSelectedColor }) => {
           myColors.colors.map((color, i) => {
             return (
               <li key={i} onClick={() => handleClick(i)}>
-                <div className={selectedOption === i ? styles.colorsActive : styles.color} style={{ background: `${color}` }}>
+                <div className={selectedColor === i ? styles.colorsActive : styles.color} style={{ background: `${color}` }}>
                   {color === '' ? '+' : ''}
                 </div>
               </li>
