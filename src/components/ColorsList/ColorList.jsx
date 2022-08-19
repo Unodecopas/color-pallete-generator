@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
-const ColorList = ({ myColors, setSelectedColor, selectedFav }) => {
+const ColorList = ({ myColors, setSelectedColor }) => {
   const [selectedOption, setSelectedOption] = useState()
 
   const handleClick = (index) => {

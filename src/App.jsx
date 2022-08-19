@@ -28,7 +28,7 @@ function App () {
     <div className="App">
       <Header />
       <main>
-        <ColorList myColors={myColors} setSelectedColor={setSelectedColor} selectedFav={selectedFav}/>
+        <ColorList myColors={myColors} setSelectedColor={setSelectedColor} />
         <div className='options'>
         <CompactPicker onChange={handleColor}/>
         <ColorsName myColors={myColors} setMyColors={setMyColors} favorites={favorites} setFavorites={setFavorites}/>
