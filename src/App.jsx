@@ -7,7 +7,7 @@ import Header from './components/Header/Header'
 import SavedFavs from './components/SavedFavs/SavedFavs'
 
 function App () {
-  const [myColors, setMyColors] = useState({ name: 'test', colors: ['red', 'green', 'yellow', '', ''] })
+  const [myColors, setMyColors] = useState({ name: '', colors: ['', '', '', '', ''] })
   const [selectedColor, setSelectedColor] = useState()
   const [favorites, setFavorites] = useState(JSON.parse(localStorage.getItem('favColors') || '[]'))
   const [selectedFav, setSelectedFav] = useState()
