@@ -11,7 +11,7 @@ const SavedFavs = ({ favorites, setFavorites, setSelectedFav }) => {
   }
   return (
     <section className={styles.savedFavs}>
-      <h2>saved</h2>
+      <h2>Saved palletes</h2>
       <ul>
         {
           favorites.map((fav, i) => {
