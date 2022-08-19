@@ -1,0 +1,30 @@
+.colorsName input,
+.colorsName input:focus {
+  background-color: transparent;
+  color: white;
+  border: 4px solid #ffffff;
+  border-radius: 9px;
+  padding: 10px 1rem;
+  outline: none;
+}
+.colorsName input::placeholder {
+  color: red;
+}
+.colorsName button {
+  color: var(--bg-light);
+  border: 4px solid #ffffff;
+  border-radius: 9px;
+  font-size: 1.5rem;
+  width: 67px;
+  height: 42px;
+}
+.colorsName {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.colorsName .inputs {
+  display: flex;
+  place-items: center;
+  gap: 12px;
+}
